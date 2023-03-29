@@ -1,6 +1,234 @@
-@import url(./../bloque/boton.css);
-@import url(./../bloque/titulo.css);
-@import url(./../bloque/proyectos.css);
+/* Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Colores */
+
+:root {
+    --principal: #BA383E;
+    --secundario: #4065DE;
+    --terciario: #FCA61F;
+    --fondo: #F1F3FF;
+    --titulo: #002E5A;
+    --letra-oscura: #323E4D;
+    --letra-semioscura: #505C69;
+    --letra-clara: #FFFFFF;
+    --sombra: 0 0 1.5rem 0 rgba(0, 0, 0, .15);
+}
+
+/* Core */
+
+html, body {
+    font-size: 16px;
+    background-color: var(--fondo);
+    font-family: 'Roboto';
+    scroll-behavior: smooth;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    html, body {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    html, body {
+        font-size: 20px;
+    }
+}
+
+/* boton */
+
+.grupo-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: .8rem 2rem;
+    text-transform: uppercase;
+    display: inline-block;
+    text-decoration: none;
+    background: var(--secundario);
+    color: var(--letra-clara);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    border: none;
+}
+
+.btn-principal_lineas {
+    border: solid 1px var(--principal);
+    background: none;
+    color: var(--principal);
+    
+}
+
+.btn-secundario_lineas {
+    border: solid 1px var(--secundario);
+    background: none;
+    color: var(--secundario);
+}
+
+@media screen and (min-width: 768px) {
+    .grupo-btn {
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+/* titulo */
+
+.section-titulo {
+    margin: 0 auto 2rem;
+    width: 90%;
+    text-align: center;
+}
+
+.section-pretexto {
+    color: var(--principal);
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+
+.section-texto {
+    color: var(--titulo);
+    font-weight: 700;
+    font-size: 2.4rem;
+    text-transform: capitalize;
+}
+
+.section-titulo_blanco {
+    color: var(--letra-clara);
+}
+
+.section-pretexto_blanco {
+    color: var(--letra-clara);
+}
+
+.section-texto_blanco {
+    color: var(--letra-clara);
+}
+
+.section_proyectos {
+    background-color: var(--secundario);
+    background: linear-gradient(180deg, var(--secundario) 40%, var(--letra-clara) 40%);
+}
+
+/* proyectos */
+
+.proyectos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.proyectos-elemento {
+    background-color: var(--letra-clara);
+    box-shadow: var(--sombra);
+    box-sizing: border-box;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.proyectos-img {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.proyectos-descripcion {
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.proyectos-titulo {
+    font-weight: 700;
+    color: var(--principal);
+    text-align: center;
+    display: block;
+    font-size: 1.2rem;
+}
+
+.proyectos-detalle {
+    font-weight: 300;
+    color: var(--letra-oscura);
+    margin: 1rem 0;
+}
+
+@media screen and (min-width: 768px) {
+    .proyectos {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .proyectos {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 .cabecera {
     flex-direction: row;
@@ -324,7 +552,7 @@
 
     .acercademi-imagen {
         width: 40%;
-        padding: 4rem;
+        padding: 0 4rem;
         box-sizing: border-box;
     }
 
