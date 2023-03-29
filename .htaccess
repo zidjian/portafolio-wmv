@@ -17,11 +17,11 @@
 
     # One month for JavaScript and PDF files
     <filesMatch ".(js|pdf)$">
-        Header set Cache-Control "max-age=2592000, public"
+        Header set Cache-Control "max-age=31536000, public"
     </filesMatch>
 
     # One week for CSS files
     <filesMatch ".(css)$">
-        Header set Cache-Control "max-age=604800, public"
+        Header set Cache-Control "max-age=31536000, public"
     </filesMatch>
 </ifModule>
