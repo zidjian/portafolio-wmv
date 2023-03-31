@@ -66,7 +66,7 @@
                         <p class="acercademi-mensaje">
                             Estoy emocionado de seguir creciendo y desarrollando mis habilidades como desarrollador front-end, y estoy ansioso por formar parte de equipos de trabajo dinámicos y desafiantes en la industria tecnológica.
                         </p>
-                        <a href="#" class="btn acercademi-btn" role="button">Descargar CV</a>
+                        <a href="#" class="btn acercademi-btn btn_terciario" role="button">Descargar CV</a>
                     </div>
                     <div class="acercademi-imagen">
                         <img src="./recursos/imagenes/icons/Programador.svg" width="306" height="388" alt="desarrollador" class="acercademi-img">
@@ -75,7 +75,7 @@
             </div>
         </section>
         <section id="htecnicas" class="tecnicas section_especial">
-            <div class="bloque">
+            <div class="bloque revelar">
                 <div class="section-titulo">
                     <span class="section-pretexto">Mis destrezas en</span>
                     <h2 class="section-texto">Habilidades técnicas</h2>
@@ -109,7 +109,7 @@
             </div>
         </section>
         <section id="hblandas" class="blandas section_especial">
-            <div class="bloque">
+            <div class="bloque revelar">
                 <div class="section-titulo">
                     <span class="section-pretexto">Mis conocimientos en</span>
                     <h2 class="section-texto">Habilidades blandas</h2>
@@ -143,7 +143,7 @@
             </div>
         </section>
         <section id="educacion" class="educacion section_especial">
-            <div class="bloque">
+            <div class="bloque revelar">
                 <div class="section-titulo">
                     <span class="section-pretexto">Mi trayectoria en</span>
                     <h2 class="section-texto">Educación</h2>
@@ -163,7 +163,7 @@
             </div>
         </section>
         <section id="proyectos" class="portafolio section_especial section_proyectos">
-            <div class="bloque">
+            <div class="bloque revelar">
                 <div class="section-titulo section-titulo_blanco">
                     <span class="section-pretexto section-pretexto_blanco">Trabajo creativo</span>
                     <h2 class="section-texto  section-texto_blanco">Proyectos</h2>
@@ -174,9 +174,10 @@
                         <div class="proyectos-descripcion">
                             <span class="proyectos-titulo">Encriptador de textos</span>
                             <p class="proyectos-detalle">Encriptador y desencriptador de textos. Desarrolado en CSS3, HTML5 y JavaScript.</p>
+                            <div class="relleno"></div>
                             <div class="grupo-btn">
-                                <a href="https://github.com/zidjian/encriptador" target="_blank" role="button" class="btn btn-secundario_lineas">Reposiorio</a>
-                                <a href="https://zidjian.github.io/encriptador/" target="_blank" role="button" class="btn btn-principal_lineas">Demo</a>
+                                <a href="https://github.com/zidjian/encriptador" target="_blank" role="button" class="btn btn_secundario">Reposiorio</a>
+                                <a href="https://fluffy-stardust-0f3a7b.netlify.app/" target="_blank" role="button" class="btn btn_principal">Demo</a>
                             </div>
                         </div>
                     </article>
@@ -185,9 +186,10 @@
                         <div class="proyectos-descripcion">
                             <span class="proyectos-titulo">Tablero Kanban</span>
                             <p class="proyectos-detalle">App de seguimiento de actividades. Desarrolado con Angular, CSS3, HTML y Typescript.</p>
+                            <div class="relleno"></div>
                             <div class="grupo-btn">
-                                <a href="https://github.com/zidjian/TableroKanban" target="_blank" role="button" class="btn btn-secundario_lineas">Reposiorio</a>
-                                <a href="https://zidjian.github.io/TableroKanban/" target="_blank" role="button" class="btn btn-principal_lineas">Demo</a>
+                                <a href="https://github.com/zidjian/TableroKanban" target="_blank" role="button" class="btn btn_secundario">Reposiorio</a>
+                                <a href="https://zidjian.github.io/TableroKanban/" target="_blank" role="button" class="btn btn_principal">Demo</a>
                             </div>
                         </div>
                     </article>
@@ -196,9 +198,10 @@
                         <div class="proyectos-descripcion">
                             <span class="proyectos-titulo">Juego del Ahorcado</span>
                             <p class="proyectos-detalle">App del juego del ahorcado. Desarrollado con CSS3, HTML5 y JavaScript.</p>
+                            <div class="relleno"></div>
                             <div class="grupo-btn">
-                                <a href="https://github.com/zidjian/ahorcadofinal" target="_blank" role="button" class="btn btn-secundario_lineas">Reposiorio</a>
-                                <a href="https://zidjian.github.io/ahorcadofinal/" target="_blank" role="button" class="btn btn-principal_lineas">Demo</a>
+                                <a href="https://github.com/zidjian/ahorcadofinal" target="_blank" role="button" class="btn btn_secundario">Reposiorio</a>
+                                <a href="https://zidjian.github.io/ahorcadofinal/" target="_blank" role="button" class="btn btn_principal">Demo</a>
                             </div>
                         </div>
                     </article>
@@ -206,19 +209,24 @@
             </div>
         </section>
         <section id="contacto" class="contacto section_especial">
-            <div class="bloque">
+            <div class="bloque revelar">
                 <div class="section-titulo">
                     <span class="section-pretexto">Algúna duda?</span>
                     <h2 class="section-texto">Contactame</h2>
                 </div>
                 <div class="micontacto">
-                    <form class="micontacto-formulario">
-                        <input type="text" class="micontacto-campo" placeholder="Nombre Completo">
-                        <input type="email" class="micontacto-campo" placeholder="Correo electronico">
-                        <input type="tel" class="micontacto-campo" placeholder="Celular">
-                        <input type="text" class="micontacto-campo" placeholder="Asunto">
-                        <textarea name="mensaje" class="micontacto-mensaje" placeholder="Mensaje" rows="6"></textarea>
-                        <a href="#" class="btn">Enviar</a>
+                    <form 
+                        action="https://formspree.io/f/xgebnkng"
+                        method="POST"
+                        id="miformulario"
+                        class="micontacto-formulario"
+                    >
+                        <input type="text" class="micontacto-campo" placeholder="Nombre Completo" required>
+                        <input type="email" class="micontacto-campo" placeholder="Correo electronico" required>
+                        <input type="tel" class="micontacto-campo" placeholder="Celular" required>
+                        <input type="text" class="micontacto-campo" placeholder="Asunto" required>
+                        <textarea name="mensaje" class="micontacto-mensaje" placeholder="Mensaje" rows="6" required></textarea>
+                        <button type="submit" class="btn">Enviar</button>
                     </form>
                     <div class="micontacto-descripcion">
                         <div class="micontacto-elemento">
@@ -265,5 +273,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./recursos/js/scroll.js" defer></script>
+    <script src="./recursos/js/form.js" defer></script>
+    <!-- <script src="./recursos/js/button.js"></script> -->
 </body>
 </html>

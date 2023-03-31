@@ -72,6 +72,10 @@ html, body {
     flex-direction: column;
 }
 
+.relleno {
+    flex: 1 1;
+}
+
 @media screen and (min-width: 768px) {
     html, body {
         font-size: 18px;
@@ -95,7 +99,7 @@ html, body {
 .btn {
     padding: .8rem 2rem;
     text-transform: uppercase;
-    display: inline-block;
+    display:  inline-block;
     text-decoration: none;
     background: var(--secundario);
     color: var(--letra-clara);
@@ -104,20 +108,56 @@ html, body {
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
+    font-size: 1rem;
     border: none;
+    overflow: hidden;
+    position: relative;
+    text-transform: capitalize;
 }
 
-.btn-principal_lineas {
-    border: solid 1px var(--principal);
-    background: none;
-    color: var(--principal);
-    
+.btn_principal {
+    background-color: var(--principal);
 }
 
-.btn-secundario_lineas {
-    border: solid 1px var(--secundario);
-    background: none;
-    color: var(--secundario);
+.btn_secundario {
+    background-color: var(--secundario);
+}
+
+.btn_terciario {
+    color: var(--letra-oscura);
+    background-color: var(--terciario);
+}
+
+replica {
+    position: absolute;
+    background-color: #fff;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation: animate 1s linear infinite;
+    -webkit-animation: animate 1s linear infinite;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.2;
+}
+
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+}
 }
 
 @media screen and (min-width: 768px) {
@@ -376,6 +416,21 @@ html, body {
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
+    box-shadow: var(--sombra);
+}
+
+.tarjetas-elemento:hover {
+    /* border: solid 1px var(--principal); */
+    transition: 1s;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
 }
 
 .tarjetas-espacio {
@@ -425,6 +480,8 @@ html, body {
 }
 
 .micontacto-campo, .micontacto-mensaje {
+    font-size: 1rem;
+    text-transform: capitalize;
     width: 100%;
     margin-bottom: .8rem;
     font-weight: 300;
@@ -503,6 +560,18 @@ html, body {
     text-align: center;
 }
 
+.revelar{
+    /* position: relative; */
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.revelar.activo{
+    transform: translateY(0);
+    opacity: 1;
+}
+
 @media screen and (min-width: 768px) {
 
     .acercademi-cuadro {
@@ -579,6 +648,7 @@ html, body {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        gap: 1rem;
     }
 
     .intro-descripcion {
@@ -592,6 +662,7 @@ html, body {
     .micontacto {
         display: flex;
         justify-content: space-between;
+        gap: 1rem;
     }
 
     .micontacto-formulario {
@@ -600,7 +671,7 @@ html, body {
     }
 
     .micontacto-descripcion {
-        width: 40%;
+        width: 45%;
         order: 1;
     }
     
@@ -623,23 +694,30 @@ html, body {
 
     .menu {
         display: flex;
-    }
-
-    .menu-elemento {
-        margin-left: 1rem;
+        gap: 1rem;
     }
 
     .menu-link {
         text-decoration: none;
-        color: var(--letra-oscura);
+        color: var(--titulo);
         font-weight: 700;
+    }
+
+    .menu-link:hover {
+        color: var(--principal);
+        border-bottom: solid 1px var(--principal);
     }
 }
 
 @media screen and (min-width: 1920px) {
 
     .acercademi-img {
-        width: 50%;
+        width: 80%;
+        margin: auto;
+    }
+
+    .bloque {
+        width: 70%;
         margin: auto;
     }
 
