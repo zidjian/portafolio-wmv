@@ -270,15 +270,19 @@ replica {
     }
 }
 
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--fondo);
+    z-index: 5;
+}
+
 .cabecera {
     flex-direction: row;
     padding: 1rem;
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    left: 0;
 }
 
 .logo {
@@ -531,7 +535,8 @@ replica {
 }
 
 .micontacto-icon {
-    color: var(--letra-clara);
+    width: 2rem;
+    height: auto;
 }
 
 .micontacto-titulo {
@@ -570,6 +575,50 @@ replica {
 .revelar.activo{
     transform: translateY(0);
     opacity: 1;
+}
+
+.menumobil {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: var(--titulo);
+    z-index: 10;
+    top: 0;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+}
+
+.menumobil-link {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--letra-clara);
+    text-decoration: none;
+}
+
+.menumobil-cerrar {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    color: var(--letra-clara);
+    font-size: 3rem;
+}
+
+.menumobil.activo {
+    right: 0;
+    transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
 }
 
 @media screen and (min-width: 768px) {
