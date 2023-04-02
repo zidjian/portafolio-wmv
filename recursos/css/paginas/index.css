@@ -113,6 +113,7 @@ html, body {
     overflow: hidden;
     position: relative;
     text-transform: capitalize;
+    cursor: pointer;
 }
 
 .btn_principal {
@@ -503,11 +504,29 @@ header {
     margin-bottom: 1.5rem;
 }
 
-.micontacto-campo, .micontacto-mensaje {
-    font-size: 1rem;
-    text-transform: capitalize;
+.formulario-grupo {
     width: 100%;
     margin-bottom: .8rem;
+}
+
+.campo_mensaje {
+    display: none;
+    margin-left: 1rem;
+    margin-top: .2rem;
+    color: #BA383E;
+}
+
+.campo_mensaje.invalido {
+    display: initial;
+}
+
+.micontacto-campo.invalido{
+    border: solid 1px var(--principal);
+}
+
+.micontacto-campo, .micontacto-mensaje {
+    font-size: 1rem;
+    width: 100%;
     font-weight: 300;
     color: var(--letra-semioscura);
     padding: .8rem 1.5rem;

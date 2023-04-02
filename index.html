@@ -509,37 +509,46 @@
                             id="miformulario"
                             class="micontacto-formulario"
                         >
-                            <input
-                                type="text"
-                                class="micontacto-campo"
-                                placeholder="Nombre Completo"
-                                required
-                            />
-                            <input
-                                type="email"
-                                class="micontacto-campo"
-                                placeholder="Correo electronico"
-                                required
-                            />
-                            <input
-                                type="tel"
-                                class="micontacto-campo"
-                                placeholder="Celular"
-                                required
-                            />
-                            <input
-                                type="text"
-                                class="micontacto-campo"
-                                placeholder="Asunto"
-                                required
-                            />
-                            <textarea
-                                name="mensaje"
-                                class="micontacto-mensaje"
-                                placeholder="Mensaje"
-                                rows="6"
-                                required
-                            ></textarea>
+                            <fieldset class="formulario-grupo">
+                                <input
+                                    type="text"
+                                    class="micontacto-campo campo_texto"
+                                    placeholder="Nombre Completo"
+                                />
+                                <p class="campo_mensaje"></p>
+                            </fieldset>
+                            <fieldset class="formulario-grupo">
+                                <input
+                                    class="micontacto-campo campo_email"
+                                    placeholder="Correo electronico"
+                                />
+                                <p class="campo_mensaje"></p>
+                            </fieldset>
+                            <fieldset class="formulario-grupo">
+                                <input
+                                    type="tel"
+                                    class="micontacto-campo campo_numeros"
+                                    placeholder="Celular"
+                                />
+                                <p class="campo_mensaje"></p>
+                            </fieldset>
+                            <fieldset class="formulario-grupo">
+                                <input
+                                    type="text"
+                                    class="micontacto-campo campo_texto"
+                                    placeholder="Asunto"
+                                />
+                                <p class="campo_mensaje"></p>
+                            </fieldset>
+                            <fieldset class="formulario-grupo">
+                                <textarea
+                                    name="mensaje"
+                                    class="micontacto-campo campo_todo"
+                                    placeholder="Mensaje"
+                                    rows="6"
+                                ></textarea>
+                                <p class="campo_mensaje"></p>
+                            </fieldset>
                             <button type="submit" class="btn">Enviar</button>
                         </form>
                         <div class="micontacto-descripcion">
@@ -640,6 +649,7 @@
         <script src="./recursos/js/scroll.js" defer></script>
         <script src="./recursos/js/form.js" defer></script>
         <script src="./recursos/js/menu.js" defer></script>
+        <script src="./recursos/js/validardor.js" defer></script>
         <!-- <script src="./recursos/js/button.js"></script> -->
     </body>
 </html>
