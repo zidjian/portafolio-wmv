@@ -323,6 +323,10 @@ header {
     color: var(--secundario);
 }
 
+.acercademi, .tecnicas, .blandas, .educacion, .portafolio, .contacto {
+    scroll-margin-top: 80px;
+}
+
 .intro {
     align-items: center;
     margin-top: 1rem;
@@ -663,6 +667,10 @@ header {
 
 @media screen and (min-width: 768px) {
 
+    .acercademi, .tecnicas, .blandas, .educacion, .portafolio, .contacto {
+        scroll-margin-top: 90px;
+    }
+
     .acercademi-cuadro {
         display: flex;
         flex-direction: row;
@@ -698,6 +706,10 @@ header {
 }
 
 @media screen and (min-width: 1024px) {
+
+    .acercademi, .tecnicas, .blandas, .educacion, .portafolio, .contacto {
+        scroll-margin-top: 100px;
+    }
 
     .acercademi-cuadro {
         display: flex;
