@@ -338,10 +338,30 @@ header {
 }
 
 .intro-titulo {
+    white-space: nowrap;
+    font-family: monospace;
+    display: block;
+    border-right: solid 1px var(--principal);
     color: var(--principal);
     font-weight: 900;
-    font-size: 2.5rem;
-    margin-top: .5rem;
+    font-size: 2.2rem;
+    margin: .5rem auto 0;
+    width: 15ch;
+    animation: tipear 3s steps(15) infinite, salto .2s infinite step-end alternate;
+    -webkit-animation: tipear 3s steps(15) infinite, salto .2s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes tipear  {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes salto {
+    50% {
+        border-color: transparent;
+    }
 }
 
 .intro-mensaje {
@@ -701,7 +721,13 @@ header {
     }
 
     .intro-descripcion {
+        width: 35%;
         text-align: left;
+    }
+
+
+    .intro-titulo {
+        margin: .5rem 0 0;
     }
 
     .intro-fondo {
@@ -755,6 +781,11 @@ header {
     .menu-link:hover {
         color: var(--principal);
         border-bottom: solid 1px var(--principal);
+    }
+
+
+    .intro-mensaje {
+        margin: 1.2rem 0;
     }
 }
 
