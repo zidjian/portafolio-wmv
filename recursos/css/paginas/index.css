@@ -26,7 +26,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.5;
 }
 ol, ul {
 	list-style: none;
@@ -287,6 +287,7 @@ header {
 }
 
 .logo {
+    text-decoration: none;
     flex-direction: row;
     align-items: center;
 
@@ -306,7 +307,6 @@ header {
     color: var(--titulo);
     font-size: 2rem;
     font-weight: 700;
-    line-height: normal;
 }
 
 .logo-titulo_claro {
@@ -410,7 +410,6 @@ header {
 .acercademi-mensaje {
     font-weight: 300;
     margin-bottom: .8rem;
-    line-height: 1.2rem;
 }
 
 .acercademi-btn {
@@ -419,6 +418,7 @@ header {
 
 .acercademi-img {
     width: 80%;
+    height: auto;
     margin: auto;
     display: block;
 }
@@ -532,6 +532,7 @@ header {
     padding: .8rem 1.5rem;
     box-sizing: border-box;
     border: solid .5px var(--letra-semioscura);
+    font-family: 'Roboto';
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
@@ -629,11 +630,11 @@ header {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    transition: 2s;
-    -webkit-transition: 2s;
-    -moz-transition: 2s;
-    -ms-transition: 2s;
-    -o-transition: 2s;
+    transition: 1.5s;
+    -webkit-transition: 1.5s;
+    -moz-transition: 1.5s;
+    -ms-transition: 1.5s;
+    -o-transition: 1.5s;
 }
 
 .menumobil-link {
@@ -653,11 +654,11 @@ header {
 
 .menumobil.activo {
     right: 0;
-    transition: 2s;
-    -webkit-transition: 2s;
-    -moz-transition: 2s;
-    -ms-transition: 2s;
-    -o-transition: 2s;
+    transition: 1.5s;
+    -webkit-transition: 1.5s;
+    -moz-transition: 1.5s;
+    -ms-transition: 1.5s;
+    -o-transition: 1.5s;
 }
 
 @media screen and (min-width: 768px) {
@@ -678,6 +679,7 @@ header {
 
     .acercademi-img {
         width: 100%;
+        height: auto;
         margin: 0;
     }
 
