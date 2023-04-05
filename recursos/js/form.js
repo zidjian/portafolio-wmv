@@ -32,7 +32,7 @@ async function manejadorEnvios(e) {
 const campos = document.querySelectorAll(".micontacto-campo");
 // const campo = document.querySelector(".micontacto-campo");
     campos.forEach((campo) => {
-        campo.addEventListener("click", () => {
+        campo.addEventListener("blur", () => {
             validarCampo(campo);
         })
     });
