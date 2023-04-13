@@ -574,8 +574,12 @@ header {
 
 .micontacto-icono {
     background-color: var(--letra-oscura);
-    display: inline-block;
-    padding: 1rem;
+    /* display: inline-block; */
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -672,6 +676,10 @@ header {
 }
 
 @media screen and (min-width: 768px) {
+
+    .cabecera {
+        padding: 1rem 0;
+    }
 
     .acercademi, .tecnicas, .blandas, .educacion, .portafolio, .contacto {
         scroll-margin-top: 90px;
