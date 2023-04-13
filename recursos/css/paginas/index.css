@@ -434,16 +434,15 @@ header {
 }
 
 .tarjetas {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     width: 100%;
 }
 
 .tarjetas-elemento {
     background-color: var(--letra-clara);
-    width: 100%;
+    width: calc(50% - .5rem);
     padding: 1.5rem;
     box-sizing: border-box;
     border-radius: 1rem;
@@ -718,8 +717,8 @@ header {
         margin: auto;
     }
 
-    .tarjetas {
-        grid-template-columns: repeat(3, 1fr);
+    .tarjetas-elemento {
+        width: calc(33% - .6rem);
     }
 }
 
@@ -759,7 +758,11 @@ header {
     }
 
     .tarjetas {
-        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+    }
+
+    .tarjetas-elemento {
+        width: calc(25% - .8rem);
         align-content: center;
     }
 
